@@ -26,7 +26,7 @@ def train_bpe(input_path,vocab_size,special_tokens):
     for i in range (256):
         vocab[i] = bytes([i])
 
-        # 添加 special tokens
+    # 添加 special tokens
     for special_token in special_tokens:
         special_bytes = special_token.encode("utf-8")
         if special_bytes not in vocab.values():
